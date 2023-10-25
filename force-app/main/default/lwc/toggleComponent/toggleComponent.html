@@ -1,7 +1,11 @@
 <template>
     <div>
-        <h1>test Header</h1>
-        <h1>{title}</h1>
-        <h2>{text}</h2>
+        <button class="accordion" onclick={showPanelFunction}>{title}</button>
+        <template if:true={showPanel}>
+            <div class="panel">
+                <p>{text}</p>
+            </div>
+        </template>
+
     </div>
 </template>
