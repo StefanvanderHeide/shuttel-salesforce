@@ -6,11 +6,11 @@ export default class CalloutComponent extends LightningElement {
     @api typeProperty;
     @track boltText;
     @track normalText;
-    @track typeProperty;
+    @track type;
 
     connectedCallback(){
         this.boltText = this.boltTextProperty;
         this.normalText = this.normalTextProperty;
-        this.typeProperty = this.typeProperty;
+        this.type = this.typeProperty;
     }
 }

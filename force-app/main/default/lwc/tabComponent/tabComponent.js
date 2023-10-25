@@ -19,6 +19,12 @@ export default class TabComponent extends LightningElement {
     @track title3;
     @track content3PictureUrl;
     @track text3;
+    @track showTab1;
+    @track showTab2;
+    @track showTab3;
+    @track show1 = true;
+    @track show2 = false;
+    @track show3 = false;
 
     connectedCallback(){
         this.title1 = this.title1Property;
@@ -30,5 +36,30 @@ export default class TabComponent extends LightningElement {
         this.title3 = this.title3Property;
         this.content3PictureUrl = this.content3PictureUrlProperty;
         this.text3 = this.text3Property;
+        if(this.title1 != null){
+            this.showTab1 = true;
+        }
+        if(this.title2 != null){
+            this.showTab2 = true;
+        }
+        if(this.title3 != null){
+            this.showTab3 = true;
+        }
+    }
+
+    openTitle1(){
+        this.show1 = true;
+        this.show2 = false;
+        this.show3 = false;
+    }
+    openTitle2(){
+        this.show1 = false;
+        this.show2 = true;
+        this.show3 = false;
+    }
+    openTitle3(){
+        this.show1 = false;
+        this.show2 = false;
+        this.show3 = true;
     }
 }

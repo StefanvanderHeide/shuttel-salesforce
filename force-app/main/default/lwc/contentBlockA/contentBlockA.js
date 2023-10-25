@@ -13,13 +13,22 @@ export default class ContentBlockA extends LightningElement {
     @track linkLabel;
     @track linkUrl;
     @track pictureSide;
+    @track pictureLeft = false;
+    @track pictureRight = false;
 
     connectedCallback(){
         this.title = this.titleProperty;
         this.contentPictureUrl = this.contentPictureUrlProperty;
-        this.text = this.text1Property;
+        this.text = this.textProperty;
         this.linkLabel = this.linkLabelProperty;
-        this.linkUrl = this.linkLabelProperty;
+        this.linkUrl = this.linkUrlProperty;
         this.pictureSide = this.pictureSideProperty;
+        if(this.pictureSide == 'Left'){
+            this.pictureLeft = true;
+            this.pictureRight = false;
+        }if(this.pictureSide == 'Right'){
+            this.pictureRight = true;
+            this.pictureLeft = false;
+        }
     }
 }

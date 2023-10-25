@@ -11,6 +11,6 @@ export default class PageCalloutComponent extends LightningElement {
     connectedCallback(){
         this.title = this.titleProperty;
         this.contentPictureUrl = this.contentPictureUrlProperty;
-        this.text = this.text1Property;
+        this.text = this.textProperty;
     }
 }

@@ -35,17 +35,17 @@ export default class ContentBlockB extends LightningElement {
     connectedCallback(){
         this.title1 = this.titleProperty1;
         this.contentPictureUrl1 = this.contentPictureUrlProperty1;
-        this.text1 = this.text1Property1;
+        this.text1 = this.textProperty1;
         this.linkLabel1 = this.linkLabelProperty1;
         this.linkUrl1 = this.linkLabelProperty1;
         this.title2 = this.titleProperty2;
         this.contentPictureUrl2 = this.contentPictureUrlProperty2;
-        this.text2 = this.text2Property2;
+        this.text2 = this.textProperty2;
         this.linkLabel2 = this.linkLabelProperty2;
         this.linkUrl2 = this.linkLabelProperty2;
         this.title3 = this.titleProperty3;
         this.contentPictureUrl3 = this.contentPictureUrlProperty3;
-        this.text3 = this.text3Property3;
+        this.text3 = this.textProperty3;
         this.linkLabel3 = this.linkLabelProperty3;
         this.linkUrl3 = this.linkLabelProperty3;
     }

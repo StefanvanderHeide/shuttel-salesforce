@@ -1,3 +1,36 @@
 <template>
-    
+    <template if:true={pictureLeft}>
+        <table>
+            <tbody>
+            <tr>
+            <td style="width: 33%;">
+                <img src={contentPictureUrl} height="100px" width="100px"></img>
+            </td>
+            <td style="width: 66%;">
+                <h1><b>{title}</b></h1>
+                <h2>{text}</h2>
+                <br>
+                <a href={linkUrl}>{linkLabel}</a>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+    </template>
+    <template if:true={pictureRight}>
+        <table>
+            <tbody>
+            <tr>
+            <td style="width: 66%;">
+                <h1><b>{title}</b></h1>
+                <h2>{text}</h2>
+                <br>
+                <a href={linkUrl}>{linkLabel}</a>
+            </td>
+            <td style="width: 33%;">
+                <img src={contentPictureUrl} height="100px" width="100px"></img>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+    </template>
 </template>
