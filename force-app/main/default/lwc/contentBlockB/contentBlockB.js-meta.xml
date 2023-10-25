@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>Content Block B Component</masterLabel>
+	<targets>
+		<target>lightningCommunity__Default</target>
+		<target>lightningCommunity__Page</target>
+	</targets>
+	<targetConfigs>
+		<targetConfig targets="lightningCommunity__Default">
+			<property label="Title 1" name="titleProperty1" type="String" required="true"></property>
+			<property label="Text 1" name="textProperty1" type="String" required="true"></property>
+			<property label="Content Picture Url 1" name="contentPictureUrlProperty1" type="String" required="true"></property>
+            <property label="Link Label 1" name="linkLabelProperty1" type="String"></property>
+            <property label="Link url 1" name="linkUrlProperty1" type="String"></property>
+
+            <property label="Title 2" name="titleProperty2" type="String" required="true"></property>
+			<property label="Text 2" name="textProperty2" type="String" required="true"></property>
+			<property label="Content Picture Url 2" name="contentPictureUrlProperty2" type="String" required="true"></property>
+            <property label="Link Label 2" name="linkLabelProperty2" type="String"></property>
+            <property label="Link url 2" name="linkUrlProperty2" type="String"></property>
+
+            <property label="Title 3" name="titleProperty3" type="String" required="true"></property>
+			<property label="Text 3" name="textProperty3" type="String" required="true"></property>
+			<property label="Content Picture Url 3" name="contentPictureUrlProperty3" type="String" required="true"></property>
+            <property label="Link Label 3" name="linkLabelProperty3" type="String"></property>
+            <property label="Link url 3" name="linkUrlProperty3" type="String"></property>
+		</targetConfig>
+	</targetConfigs>
+</LightningComponentBundle>
