@@ -9,8 +9,8 @@
 	</targets>
 	<targetConfigs>
 		<targetConfig targets="lightningCommunity__Default">
-			<property label="Title" name="title" type="String" required="true"></property>
-            <property label="Text" name="text" type="String" required="true"></property>
+			<property label="Title" name="titleProperty" type="String" required="true"></property>
+            <property label="Text" name="textProperty" type="String" required="true"></property>
 		</targetConfig>
 	</targetConfigs>
 </LightningComponentBundle>
