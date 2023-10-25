@@ -1,0 +1,60 @@
+.question-title{
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.regular-answer{
+    font-size: 20px;
+    line-height: 36px;
+    color: #121212;
+}
+
+.background-answer{
+    font-size: 20px;
+    line-height: 36px;
+    color: #121212;
+    background-color: #e3ebf3;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.background-answer-position{
+    padding: 40px;
+}
+
+.border-answer{
+    font-size: 20px;
+    line-height: 36px;
+    color: #121212;
+    border-radius: 40px 40px 40px 40px;
+    border-width: 0.2rem;
+    border-color: #e3ebf3;
+    border-style: solid;
+}
+
+.topic-position{
+    padding-bottom: 40px;
+}
+
+.paragraph-position{
+    line-height: 19px;
+}
+
+.title{
+    font-size: 60px;
+    line-height: 60px;
+    color: #121212;
+}
+
+.ciutadellaRoundedBold-font-family{
+    font-family: 'CiutadellaRoundedBOLD';
+}
+
+.ciutadellaRoundedRegular-font-family{
+    font-family: 'CiutadellaRoundedRegular';
+}
+
+@media only screen and (max-width: 768px) {
+    .video-width{
+        width: 250px;
+    }
+  }
