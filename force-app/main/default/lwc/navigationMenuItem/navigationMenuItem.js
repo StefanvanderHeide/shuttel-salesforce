@@ -9,7 +9,7 @@ export default class NavigationMenuItem extends NavigationMixin(LightningElement
      * the NavigationMenuItem from the Apex controller, 
      * contains a label and a target.
      */
-    @api item = {};
+    @api item;
 
     @api updateActiveItem;
 
@@ -21,9 +21,12 @@ export default class NavigationMenuItem extends NavigationMixin(LightningElement
      */
     pageReference;
 
+    hasSecondaryItems;
+
     async connectedCallback() {
-        const { type, target, defaultListViewId } = this.item;
+        const { type, target, defaultListViewId, SecondaryItems } = this.item;
         
+        this.hasSecondaryItems = !!SecondaryItems.length;
         // get the correct PageReference object for the menu item type
         if (type === 'SalesforceObject') {
             // aka "Salesforce Object" menu item

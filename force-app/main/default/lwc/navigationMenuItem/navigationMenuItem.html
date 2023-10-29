@@ -1,5 +1,18 @@
 <template>
-    <a href='javascript:void(0);' class='slds-show' onclick={handleClick}>
-        {item.Label}
+    <a class="dropdown-toggle" href='javascript:void(0);' onclick={handleClick} role="button" id="dropdownMenuLink">
+        <span class="dropdown-toggle__title">{item.Label}</span>
+        <svg class="dropdown-chevron" height="10px" viewBox="0 0 438 266" version="1.1">
+            <g transform="translate(219.000000, 133.000000) rotate(90.000000) translate(-219.000000, -133.000000) translate(86.000000, -86.000000)">
+                <path fill="currentColor" d="M258.476,235.971 L64.132,430.314 C54.759,439.687 39.563,439.687 30.191,430.314 L7.524,407.647 C-1.833,398.29 -1.851,383.125 7.484,373.746 L161.505,219 L7.484,64.255 C-1.851,54.876 -1.833,39.711 7.524,30.354 L30.191,7.687 C39.564,-1.686 54.76,-1.686 64.132,7.687 L258.475,202.03 C267.848,211.402 267.848,226.598 258.476,235.971 Z" id="Path"></path>
+            </g>
+        </svg>
+        <template if:true={hasSecondaryItems}>
+            <div class="dropdown-menu mt-0 mt-lg-4">
+                <a class="dropdown-item" href="/nl/ontdek-shuttel/over-shuttel/">Over Shuttel</a>
+                <a class="dropdown-item" href="/nl/ontdek-shuttel/reismogelijkheden/">Reismogelijkheden</a>
+                <a class="dropdown-item" href="/nl/shuttel-in-de-media/">Shuttel in de media</a>
+                <a class="dropdown-item" href="/nl/co2-rapportageplicht-werkgebonden-personenmobiliteit/">Verplichte CO2-rapportage</a>
+            </div>
+        </template>
     </a>
 </template>

@@ -3,11 +3,11 @@
         <section class={navItemsClasses}>
             <ul class="slds-list_horizontal">
                 <template for:each={menuItems} for:item="item">
-                    <li key={item.Id} class="slds-item">
-                    <c-navigation-menu-item 
-                        item={item} 
-                        update-active-item={updateActiveItem}>
-                    </c-navigation-menu-item>
+                    <li key={item.Id} class="header__menu-list-item dropdown">
+                        <c-navigation-menu-item 
+                            item={item} 
+                            update-active-item={updateActiveItem}>
+                        </c-navigation-menu-item>
                     </li>
                 </template>
             </ul>

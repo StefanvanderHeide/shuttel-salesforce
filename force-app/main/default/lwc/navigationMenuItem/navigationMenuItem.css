@@ -1,18 +1,99 @@
 a {
-    color: #fff!important;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  
-  a:hover {
+  color: #32323a;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-toggle .dropdown-chevron {
+  margin-left: 8px;
+  transform: translateY(-1px);
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.dropdown-toggle:hover, .dropdown.is-active .dropdown-toggle__title, .dropdown-item.is-active {
+    color: #ff2441 !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #2441ff;
     text-decoration: underline;
+}
+
+.dropdown-toggle:hover .dropdown-toggle__title {
+    text-decoration: underline;
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: 1rem;
+  color: #32323a;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 700;
+  color: #121212;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+@media (min-width: 992px) {
+  .header__menu-list-item a {
+    font-size: 20px;
+    line-height: 20px;
   }
+}
 
-  @media screen and (max-width: 1200px) {
+.header__menu-list-item a {
+  font-family: "Ciutadella Rounded",sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #121212;
+  text-decoration: none;
+}
 
+@media (min-width: 768px) {
+  .dropdown-item {
+      padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .slds-show{
     font-size: 11px;
   }
