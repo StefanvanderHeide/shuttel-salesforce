@@ -111,3 +111,19 @@
   left: 0px;
   will-change: transform;
 }
+
+.hamburger-menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  /* Show the hamburger menu icon on small screens */
+  .hamburger-menu-icon {
+      display: block;
+  }
+
+  /* Hide the navigation menu items on small screens */
+  .navItemsClasses {
+      display: none;
+  }
+}

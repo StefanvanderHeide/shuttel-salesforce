@@ -1,6 +1,6 @@
 <template>
     <div onmouseenter={showSubmenu} onmouseleave={hideSubmenu}>
-        <a class="dropdown-toggle" href='javascript:void(0);' onclick={handleClick} role="button" id="dropdownMenuLink">
+        <a class="dropdown-toggle" href={item.Target} role="button" id="dropdownMenuLink">
             <span class="dropdown-toggle__title">{item.Label}</span>
             <template if:true={hasSecondaryItems}>
                 <svg class="dropdown-chevron" height="10px" viewBox="0 0 438 266" version="1.1">

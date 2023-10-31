@@ -26,7 +26,7 @@ svg {
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-    color: #2441ff;
+    color: #ff2441;
     text-decoration: underline;
 }
 
@@ -63,7 +63,7 @@ svg {
   width: 100%;
   padding: 0.25rem 1.5rem;
   clear: both;
-  font-weight: 700;
+  font-weight: 400;
   color: #121212;
   text-align: inherit;
   white-space: nowrap;
@@ -98,7 +98,7 @@ svg {
 
 @media (min-width: 768px) {
   .dropdown-item {
-      padding: 10px 10px;
+      padding: 4px 10px;
   }
 }
 
@@ -106,4 +106,8 @@ svg {
   .slds-show{
     font-size: 11px;
   }
+}
+
+.mobile-hide {
+    display: none;
 }

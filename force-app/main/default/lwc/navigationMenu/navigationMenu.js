@@ -70,6 +70,12 @@ export default class NavigationMenu extends LightningElement {
 
   @track navItemsClasses = "nav-items mobile-hide";
 
+  hamburgerMenuOpen = false;
+
+  toggleHamburgerMenu() {
+      this.hamburgerMenuOpen = !this.hamburgerMenuOpen;
+  }
+
   get hasFooterImage(){
     return this.footerImage.length > 1;
   }
