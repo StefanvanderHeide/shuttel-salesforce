@@ -10,7 +10,6 @@
 	<targetConfigs>
 		<targetConfig targets="lightningCommunity__Default">
 			<property label="Title" name="titleProperty" type="String" required="true"></property>
-			<property label="Content Picture Url" name="contentPictureUrlProperty" type="String" required="true"></property>
 			<property label="Text" name="textProperty" type="String" required="true"></property>
 		</targetConfig>
 	</targetConfigs>

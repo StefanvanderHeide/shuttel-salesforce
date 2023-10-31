@@ -1,4 +1,4 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api, track } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 
 import basePath from '@salesforce/community/basePath';
@@ -22,6 +22,18 @@ export default class NavigationMenuItem extends NavigationMixin(LightningElement
     pageReference;
 
     hasSecondaryItems;
+
+    showSubmenu = false;
+
+    showSubmenu() {
+        console.log('show');
+        this.showSubmenu = true;
+    }
+
+    hideSubmenu() {
+        console.log('hide');
+        this.showSubmenu = false;
+    }
 
     async connectedCallback() {
         const { type, target, defaultListViewId, SecondaryItems } = this.item;
