@@ -43,7 +43,7 @@ svg {
   top: 100%;
   left: 0;
   z-index: 1000;
-  display: block;
+  display: none;
   float: left;
   min-width: 10rem;
   padding: .5rem 0;
@@ -85,6 +85,15 @@ svg {
   line-height: 1.5;
   color: #121212;
   text-decoration: none;
+}
+
+.dropdown-toggle:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  transform: translate3d(0px, 23px, 0px);
+  top: 0px;
+  left: 0px;
+  will-change: transform;
 }
 
 @media (min-width: 768px) {
