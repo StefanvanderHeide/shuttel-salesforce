@@ -14,24 +14,19 @@
 			<property label="Image 1 (Enter static resource name)" name="staticResourceName1Property" type="String" required="true"></property>
 			<property name="staticResourceHeight1Property" type="String"  label="Image 1 Height" required="true"></property>
 			<property name="staticResourceWidth1Property" type="String"  label="Image 1 Width" required="true"></property>
-            <property label="Link Label 1" name="linkLabelProperty1" type="String"></property>
-            <property label="Link url 1" name="linkUrlProperty1" type="String"></property>
 
             <property label="Title 2" name="titleProperty2" type="String" required="true"></property>
 			<property label="Text 2" name="textProperty2" type="String" required="true"></property>
 			<property label="Image 2 (Enter static resource name)" name="staticResourceName2Property" type="String"></property>
 			<property name="staticResourceHeight2Property" type="String"  label="Image 2 Height"></property>
 			<property name="staticResourceWidth2Property" type="String"  label="Image 2 Width"></property>
-            <property label="Link Label 2" name="linkLabelProperty2" type="String"></property>
-            <property label="Link url 2" name="linkUrlProperty2" type="String"></property>
 
             <property label="Title 3" name="titleProperty3" type="String" required="true"></property>
 			<property label="Text 3" name="textProperty3" type="String" required="true"></property>
 			<property label="Image 3 (Enter static resource name)" name="staticResourceName3Property" type="String"></property>
 			<property name="staticResourceHeight3Property" type="String"  label="Image 3 Height"></property>
 			<property name="staticResourceWidth3Property" type="String"  label="Image 3 Width"></property>
-            <property label="Link Label 3" name="linkLabelProperty3" type="String"></property>
-            <property label="Link url 3" name="linkUrlProperty3" type="String"></property>
+
 		</targetConfig>
 	</targetConfigs>
 </LightningComponentBundle>

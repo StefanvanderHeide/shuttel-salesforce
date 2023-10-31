@@ -8,16 +8,12 @@ export default class ContentBlockA extends LightningElement {
     @api staticResourceHeightProperty;
     @api staticResourceWidthProperty;
     @api textProperty;
-    @api linkLabelProperty;
-    @api linkUrlProperty;
     @api pictureSideProperty;
     @track title;
     @track text;
     @track staticResourceHeight;
     @track staticResourceWidth;
     @track staticResourceUrl;
-    @track linkLabel;
-    @track linkUrl;
     @track pictureSide;
     @track pictureLeft = false;
     @track pictureRight = false;
@@ -27,8 +23,6 @@ export default class ContentBlockA extends LightningElement {
         this.text = this.textProperty;
         this.staticResourceHeight = this.staticResourceHeightProperty;
         this.staticResourceWidth = this.staticResourceWidthProperty;
-        this.linkLabel = this.linkLabelProperty;
-        this.linkUrl = this.linkUrlProperty;
         this.pictureSide = this.pictureSideProperty;
         if(this.pictureSide == 'Left'){
             this.pictureLeft = true;

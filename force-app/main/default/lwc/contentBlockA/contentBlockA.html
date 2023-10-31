@@ -8,9 +8,7 @@
             </td>
             <td style="width: 66%;">
                 <h1><b>{title}</b></h1>
-                <h2>{text}</h2>
-                <br>
-                <a href={linkUrl}>{linkLabel}</a>
+                <lightning-formatted-rich-text value={text}></lightning-formatted-rich-text>
             </td>
             </tr>
             </tbody>
@@ -22,9 +20,7 @@
             <tr>
             <td style="width: 66%;">
                 <h1><b>{title}</b></h1>
-                <h2>{text}</h2>
-                <br>
-                <a href={linkUrl}>{linkLabel}</a>
+                <lightning-formatted-rich-text value={text}></lightning-formatted-rich-text>
             </td>
             <td style="width: 33%;">
                 <img src={staticResourceUrl} height={staticResourceHeight} width={staticResourceWidth}></img>

@@ -14,9 +14,6 @@
 			<property label="Static Resource Name" name="staticResourceNameProperty" type="String" required="true"></property>
 			<property label="Static Resource Height" name="staticResourceHeightProperty" type="String" required="true"></property>
 			<property label="Static Resource Width" name="staticResourceWidthProperty" type="String" required="true"></property>
-
-            <property label="Link Label" name="linkLabelProperty" type="String"></property>
-            <property label="Link url" name="linkUrlProperty" type="String"></property>
 			<property label="Picture Position (select Left or Right)" name="pictureSideProperty" type="String"></property>
 		</targetConfig>
 	</targetConfigs>
