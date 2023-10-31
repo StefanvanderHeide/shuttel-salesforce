@@ -42,6 +42,10 @@
     width: 100%;
     justify-content: center;
   }
+
+  ul li {
+    height: 100%;
+  }
   
   @media screen and (max-width: 1200px) {
     
@@ -103,7 +107,7 @@
   }
 }
 
-.header__menu-list-item.dropdown:hover .dropdown-menu {
+.dropdown-toggle:hover .dropdown-menu {
   display: block;
   position: absolute;
   transform: translate3d(0px, 23px, 0px);
