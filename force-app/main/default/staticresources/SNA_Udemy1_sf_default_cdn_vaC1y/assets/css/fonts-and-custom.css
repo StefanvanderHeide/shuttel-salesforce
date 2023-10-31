@@ -1,11 +1,17 @@
 @font-face {
     font-family: 'CiutadellaRoundedBOLD';
-    src: url('/resource/Shuttel_font/Lettertype/CiutadellaRounded-Bold.otf');
+    src: url('/sfsites/c/resource/Shuttel_font/Lettertype/CiutadellaRounded-Bold.otf');
 
 }
 @font-face {
     font-family: 'CiutadellaRoundedRegular';
-    src: url('/resource/Shuttel_font/Lettertype/CiutadellaRounded-Regular.otf');
+    src: url('/sfsites/c/resource/Shuttel_font/Lettertype/CiutadellaRounded-Regular.otf');
+}
+
+.dropdown-toggle__title a {
+    font-family:'CiutadellaRoundedBOLD';
+    font-size: 20px;
+    line-height: 20px;
 }
 
 .comm-navigation__menu-item

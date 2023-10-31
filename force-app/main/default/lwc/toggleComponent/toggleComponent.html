@@ -3,7 +3,7 @@
         <button class="accordion" onclick={showPanelFunction}>{title}</button>
         <template if:true={showPanel}>
             <div class="panel">
-                <p>{text}</p>
+                <lightning-formatted-rich-text value={text}></lightning-formatted-rich-text>
             </div>
         </template>
 

@@ -23,18 +23,6 @@ export default class NavigationMenuItem extends NavigationMixin(LightningElement
 
     hasSecondaryItems;
 
-    showSubmenu = false;
-
-    showSubmenu() {
-        console.log('show');
-        this.showSubmenu = true;
-    }
-
-    hideSubmenu() {
-        console.log('hide');
-        this.showSubmenu = false;
-    }
-
     async connectedCallback() {
         const { type, target, defaultListViewId, SecondaryItems } = this.item;
         

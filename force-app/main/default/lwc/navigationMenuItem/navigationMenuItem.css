@@ -16,6 +16,13 @@ a:hover {
   transform: translateY(-1px);
 }
 
+.dropdown-toggle > .dropdown-toggle__title {
+  font-family: 'CiutadellaRoundedBOLD', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;
@@ -47,7 +54,6 @@ svg {
   float: left;
   min-width: 10rem;
   padding: .5rem 0;
-  margin: .125rem 0 0;
   font-size: 1rem;
   color: #32323a;
   text-align: left;
@@ -98,7 +104,7 @@ svg {
 
 @media (min-width: 768px) {
   .dropdown-item {
-      padding: 4px 10px;
+      padding: 10px 10px;
   }
 }
 
