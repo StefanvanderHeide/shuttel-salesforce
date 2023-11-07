@@ -1,3 +1,12 @@
-{
-    
+.note{
+    border-radius: 15px;
+    border: 2px solid #243bff;
+    padding: 20px;
+    background-color:#eceefb;
+}
+.warning{
+    border-radius: 15px;
+    border: 2px solid #ff284f;
+    padding: 20px;
+    background-color: #fbecef;
 }

@@ -1,6 +1,6 @@
 <template>
-    <div >
-        <template if:true={showNote}>
+    <template if:true={showNote}>
+        <div class="note">
             <table>
                 <tbody>
                     <tr>
@@ -13,8 +13,10 @@
                     </tr>
                 </tbody>
             </table>
-        </template>
-        <template if:true={showWarning}>
+        </div>
+    </template>
+    <template if:true={showWarning}>
+        <div class="warning">
             <table>
                 <tbody>
                     <tr>
@@ -27,6 +29,6 @@
                     </tr>
                 </tbody>
             </table>
-        </template>
-    </div>
+        </div>
+    </template>
 </template>

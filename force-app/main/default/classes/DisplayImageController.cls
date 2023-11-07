@@ -9,8 +9,9 @@ public with sharing Class DisplayImageController {
                              
         if (resourceList.size() == 1) {
             String urlInstance = String.valueof(System.URL.getSalesforceBaseURL()).replace('Url:[delegate=','').replace(']','');
+            String urlInstance2 = 'https://shuttel--helpsite--c.sandbox.vf.force.com';
            String namespace = resourceList[0].NamespacePrefix;
-           return urlInstance + '/resource/' 
+           return urlInstance2 + '/resource/' 
               + resourceList[0].SystemModStamp.getTime() + '/' 
               + (namespace != null && namespace != '' ? namespace + '__' : '') 
               + resourceName; 
