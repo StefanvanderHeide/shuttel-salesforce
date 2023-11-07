@@ -20,21 +20,28 @@
     width:100%;
     display: block;
   }
+
+  .navbar-container{
+    background-color: #2d2e83;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .navbar {
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
+    z-index: 8000;
+    width: 100%;
+    font-family: sans-serif;
+  }
   
   .nav-items {
     width: 100%;
     height: 100%;
     display: flex;
-  }
-  
-  .navbar {
-    background: transparent;
-    color: #32323a;
-    font-weight: bold;
-    z-index: 8000;
-    height: 60px;
-    width: 100%;
-    font-family: sans-serif;
   }
   
   .slds-list_horizontal {
@@ -43,68 +50,20 @@
     justify-content: center;
   }
 
-  ul li {
-    height: 100%;
-  }
-  
-  @media screen and (max-width: 1200px) {
-    
-    .navbar {
-      height: fit-content;
-      font-size: 14px;
-      text-align: center;
-      margin-top: 12px;
-    }
-  
-    .slds-item{
-      flex: auto;
-      justify-content: center;
-      display: flex;
-    }
-    .nav-items{
-      display: flex;
-    }
-  
-    /*
-    .nav-items.mobile-hide {
-      display: none;
-    }
-    */
-  
-    .logo-wrapper {
-      display: none;
-    }
-  }
-
-  
-@media (min-width: 1330px) {
-  .header__menu-list-item:not(:last-child) {
-      margin-right: 38px;
-  }
+.hamburger-icon {
+    --slds-c-icon-color-foreground-default: #fff;
+    --slds-c-icon-color-background: transparent;
 }
 
-@media (min-width: 1330px) {
-  .header__menu-list-item:not(:last-child) {
-      margin-right: 38px;
-  }
+.hamburger-menu {
+  background-color: #2d2e83;
+  height: 100vh;
+  text-align: center;
+  padding-top: 40px;
 }
 
-@media (min-width: 1300px) {
-  .header__menu-list-item:not(:last-child) {
-      margin-right: 30px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .header__menu-list-item:not(:last-child) {
-      margin-right: 13px;
-  }
-}
-
-@media (min-width: 992px) {
-  .header__menu-list-item:not(:last-child) {
-      margin-right: 28px;
-  }
+.mobile-header.hamburger-open{
+  background-color: #2d2e83;
 }
 
 .dropdown-toggle:hover .dropdown-menu {
@@ -116,11 +75,52 @@
   will-change: transform;
 }
 
-.hamburger-menu-icon {
+.mobile-header {
   display: none;
 }
 
+.hamburger-menu{
+  display: none;
+}
+
+.contact-button{
+  font-family: 'CiutadellaRoundedBOLD', sans-serif;
+  background-color: rgb(255, 40, 65);
+  display: inline-block;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-left: 25px;
+  border: 0;
+  font-size: 1.75rem;
+  margin-top: 40px;
+}
+
 @media screen and (max-width: 992px) {
+
+  .mobile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+  }
+
+  .hamburger-menu{
+    display: block;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .navbar-container{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+  }
+  
   /* Show the hamburger menu icon on small screens */
   .hamburger-menu-icon {
       display: block;

@@ -1,13 +1,42 @@
 <template>
-    <div class="tab">
+    <div class="tabs-container">
+
+    <div class="tabs">
         <template if:true={showTab1}>
-            <button class="tablinks" onclick={openTitle1}>{title1}</button>
+            <template if:true={show1}>
+                <div class="tablink tab-active">
+                    <div class="tab-link" onclick={openTitle1}>{title1}</div>
+                </div>
+            </template>
+            <template if:false={show1}>
+                <div class="tablink">
+                    <div class="tab-link" onclick={openTitle1}>{title1}</div>
+                </div>
+            </template>     
         </template>
         <template if:true={showTab2}>
-            <button class="tablinks" onclick={openTitle2}>{title2}</button>
+            <template if:true={show2}>
+                <div class="tablink tab-active">
+                    <div class="tab-link" onclick={openTitle2}>{title2}</div>
+                </div>
+            </template>
+            <template if:false={show2}>
+                <div class="tablink">
+                    <div class="tab-link" onclick={openTitle2}>{title2}</div>
+                </div>
+            </template> 
         </template>
         <template if:true={showTab3}>
-            <button class="tablinks" onclick={openTitle3}>{title3}</button>
+            <template if:true={show3}>
+                <div class="tablink tab-active">
+                    <div class="tab-link" onclick={openTitle3}>{title3}</div>
+                </div>
+            </template>
+            <template if:false={show3}>
+                <div class="tablink">
+                    <div class="tab-link" onclick={openTitle3}>{title3}</div>
+                </div>
+            </template> 
         </template>
       </div>
 
@@ -65,4 +94,5 @@
             </table>
           </div>
       </template>
+      </div>
 </template>

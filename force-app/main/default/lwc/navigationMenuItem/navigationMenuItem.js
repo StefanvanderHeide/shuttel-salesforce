@@ -10,7 +10,7 @@ export default class NavigationMenuItem extends NavigationMixin(LightningElement
      * contains a label and a target.
      */
     @api item;
-
+    @api isMobile;
     @api updateActiveItem;
 
     error;

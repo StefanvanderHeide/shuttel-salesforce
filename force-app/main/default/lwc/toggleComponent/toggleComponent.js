@@ -14,11 +14,10 @@ export default class toggleComponent extends LightningElement {
     }
     
     showPanelFunction(){
-        if(this.showPanel){
+        if (this.showPanel) {
             this.showPanel = false;
-        }else{
+        } else {
             this.showPanel = true;
         }
-        console.log(this.showPanel);
     }
 }

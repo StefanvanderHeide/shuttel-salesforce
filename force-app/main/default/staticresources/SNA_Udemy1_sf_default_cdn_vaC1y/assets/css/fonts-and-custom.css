@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'CiutadellaRoundedBOLD';
-    src: url('/sfsites/c/resource/Shuttel_font/Lettertype/CiutadellaRounded-Bold.otf');
+    src: url(../resource/Shuttel_font/Lettertype/CiutadellaRounded-Bold.otf);
 
 }
 @font-face {
     font-family: 'CiutadellaRoundedRegular';
-    src: url('/sfsites/c/resource/Shuttel_font/Lettertype/CiutadellaRounded-Regular.otf');
+    src: url(../resource/Shuttel_font/Lettertype/CiutadellaRounded-Regular.otf);
 }
 
 .dropdown-toggle__title a {
@@ -14,10 +14,15 @@
     line-height: 20px;
 }
 
+.secondary-item a {
+  font-family: "CiutadellaRoundedRegular",sans-serif;
+}
+
+
 .comm-navigation__menu-item
  {
      font-family:'CiutadellaRoundedBOLD';
-        font-size:22px;
+     font-size:22px;
  }
 
 .flex-wrap-ie11
@@ -259,5 +264,28 @@
 
 .article-item.selfServiceArticleListItem {
     background-color: rgb(241,245,249);
+}
+
+/* Overrides */
+
+.forceCommunitySection .cb-section_column:only-child {
+    padding: 0!important;
+}
+.forceCommunitySection .cb-section_column:last-child {
+    padding: 0!important;
+}
+.forceCommunitySection .cb-section_column:first-child {
+    padding: 0!important;
+}
+.forceCommunitySection .cb-section_column {
+    padding: 0!important;
+}
+
+.siteforceContentArea .cb-section_column .ui-widget:not(:last-child) {
+    margin: 0!important;
+}
+
+.siteforceContentArea .comm-layout-column .ui-widget:not(:last-child), .siteforceContentArea .cb-section_column .ui-widget:not(:last-child) {
+    margin: 0!important;
 }
 :root { --dxp-c-section-columns-max-width: 1440px; }

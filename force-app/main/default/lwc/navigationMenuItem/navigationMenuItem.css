@@ -1,14 +1,11 @@
 a {
-  color: #32323a;
+  color: #fff;
+  font-family: 'CiutadellaRoundedBOLD', sans-serif;
   font-size: 16px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   cursor: pointer;
-}
-
-a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .dropdown-toggle .dropdown-chevron {
@@ -23,13 +20,24 @@ a:hover {
   font-weight: bold;
 }
 
+.header__menu-list-item .dropdown-toggle {
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;
 }
 
-.dropdown-toggle:hover, .dropdown.is-active .dropdown-toggle__title, .dropdown-item.is-active {
+.dropdown-toggle:hover{
+  background-color: rgb(69, 73, 153);
+}
+
+.dropdown.is-active .dropdown-toggle__title, .dropdown-item.is-active {
     color: #ff2441 !important;
+    text-decoration: underline;    
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
@@ -37,12 +45,11 @@ svg {
     text-decoration: underline;
 }
 
-.dropdown-toggle:hover .dropdown-toggle__title {
-    text-decoration: underline;
-}
-
 .dropdown-toggle {
     position: relative;
+    height: 60px;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
 }
 
 .dropdown-menu {
@@ -50,9 +57,9 @@ svg {
   top: 100%;
   left: 0;
   z-index: 1000;
+  min-width: 100%;
   display: none;
   float: left;
-  min-width: 10rem;
   padding: .5rem 0;
   font-size: 1rem;
   color: #32323a;
@@ -60,8 +67,9 @@ svg {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,.15);
-  border-radius: .25rem
+  border-color: rgba(0,0,0,.15);
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
 }
 
 .dropdown-item {
@@ -93,18 +101,22 @@ svg {
   text-decoration: none;
 }
 
+.dropdown-menu .dropdown-item {
+  font-family: "CiutadellaRoundedRegular",sans-serif;
+}
+
 .dropdown-toggle:hover .dropdown-menu {
   display: block;
   position: absolute;
-  transform: translate3d(0px, 23px, 0px);
-  top: 0px;
+  transform: translate3d(0px, 55px, 0px);
+  top: 5px;
   left: 0px;
   will-change: transform;
 }
 
 @media (min-width: 768px) {
   .dropdown-item {
-      padding: 10px 10px;
+      padding: 4px 10px;
   }
 }
 
@@ -112,6 +124,14 @@ svg {
   .slds-show{
     font-size: 11px;
   }
+}
+
+@media screen and (max-width: 992px) {
+  .mobile-item {
+    padding: 10px 20px;
+    font-size: 2.5rem;
+  }
+
 }
 
 .mobile-hide {

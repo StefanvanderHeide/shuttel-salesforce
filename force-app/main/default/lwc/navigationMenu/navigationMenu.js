@@ -2,11 +2,7 @@ import { LightningElement, api, wire, track } from "lwc";
 import { CurrentPageReference } from "lightning/navigation";
 
 import getNavigationMenuItems from "@salesforce/apex/NavigationController.getNavigationMenuItems";
-import isGuestUser from "@salesforce/user/isGuest";
 
-import basePath from '@salesforce/community/basePath';
-
-import USER_ID from "@salesforce/user/Id";
 
 import { subscribe, MessageContext } from 'lightning/messageService';
 
@@ -70,10 +66,23 @@ export default class NavigationMenu extends LightningElement {
 
   @track navItemsClasses = "nav-items mobile-hide";
 
-  hamburgerMenuOpen = false;
+  @track hamburgerMenuOpen = false;
+
+  @track hamburgerIconClass = 'hamburger-icon hamburger-closed';
+
+  @track mobileHeaderClass = 'mobile-header hamburger-closed'
 
   toggleHamburgerMenu() {
-      this.hamburgerMenuOpen = !this.hamburgerMenuOpen;
+    if (this.hamburgerIconClass == 'hamburger-icon hamburger-closed'){
+      this.hamburgerIconClass = 'hamburger-icon hamburger-open';
+      this.mobileHeaderClass = 'mobile-header hamburger-open';
+    } else {
+      this.hamburgerIconClass = 'hamburger-icon hamburger-closed';
+      this.mobileHeaderClass = 'mobile-header hamburger-closed';
+    }
+
+    this.hamburgerMenuOpen = !this.hamburgerMenuOpen;
+    console.log(this.hamburgerMenuOpen);
   }
 
   get hasFooterImage(){
@@ -144,13 +153,14 @@ export default class NavigationMenu extends LightningElement {
     const menuItems = this.menuItems.map(item => {
       item.active = false;
 
-      if(currentTarget === item.target) {
+      if(currentTarget !== item.target) {
         item.active = true;
       }
 
       return item;
      });
 
+console.log(menuItems);
      this.menuItems = menuItems;
      this.toggleMenu();
   }

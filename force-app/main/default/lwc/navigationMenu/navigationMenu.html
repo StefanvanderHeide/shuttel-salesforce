@@ -1,19 +1,50 @@
 <template>
-    <nav class="navbar" role="navigation">
-        <button class="hamburger-menu-icon" onclick={toggleHamburgerMenu}>
-test
-        </button>
-        <section class={navItemsClasses}>
-            <ul class="slds-list_horizontal">
-                <template for:each={menuItems} for:item="item">
-                    <li key={item.Id} class="header__menu-list-item dropdown">
-                        <c-navigation-menu-item 
-                            item={item} 
-                            update-active-item={updateActiveItem}>
-                        </c-navigation-menu-item>
-                    </li>
-                </template>
-            </ul>
-        </section>
-    </nav>
+    <div class="navbar-container">
+        <nav class="navbar" role="navigation">
+            <section class={mobileHeaderClass}>
+                <img class="mobile-logo" src="https://support.shuttel.nl/file-asset/Shuttel_logo3?v=1&height=40&width=100" />
+                <div class="hamburger-menu-icon" >
+                    <template if:true={hamburgerMenuOpen}>
+                        <lightning-icon onclick={toggleHamburgerMenu} class={hamburgerIconClass} icon-name="utility:close" alternative-text="Close" title="Close"></lightning-icon>
+                    </template>
+                    <template if:false={hamburgerMenuOpen}>
+                        <lightning-icon onclick={toggleHamburgerMenu} class={hamburgerIconClass}  icon-name="utility:rows" alternative-text="Menu" title="Menu"></lightning-icon>
+                    </template>
+                </div>
+            </section>
+            <section class={navItemsClasses}>
+                <ul class="slds-list_horizontal">
+                    <template for:each={menuItems} for:item="item">
+                        <li key={item.Id} class="header__menu-list-item dropdown">
+                            <c-navigation-menu-item 
+                                item={item} 
+                                update-active-item={updateActiveItem}>
+                            </c-navigation-menu-item>
+                        </li>
+                    </template>
+                </ul>
+            </section>
+
+            <template if:true={hamburgerMenuOpen}>
+                <nav class="hamburger-menu">
+                    <ul class="slds-list_vertical">
+                        <template for:each={menuItems} for:item="item">
+                            <li key={item.Id} class="header__menu-list-item">
+                                <c-navigation-menu-item 
+                                    item={item} 
+                                    update-active-item={updateActiveItem}
+                                    is-mobile="true"
+                                >
+                    
+                                </c-navigation-menu-item>
+                            </li>
+                        </template>
+                        <li>
+                            <button class="contact-button">neem contact op</button>
+                        </li>
+                    </ul>
+                </nav>
+            </template>
+        </nav>
+    </div>
 </template>
