@@ -1,0 +1,11 @@
+<template>
+    <div class="toggle-container">
+        <button class="accordion" onclick={showPanelFunction}><b>{question}</b></button>
+        <template if:true={showPanel}>
+            <div class="panel">
+                <lightning-formatted-rich-text value={answer}></lightning-formatted-rich-text>
+            </div>
+        </template>
+
+    </div>
+</template>
