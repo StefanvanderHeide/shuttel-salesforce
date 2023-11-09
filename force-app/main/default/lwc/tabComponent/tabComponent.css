@@ -1,11 +1,10 @@
 .tabs-container{
-  max-width: 1000px;
+  max-width: 840px;
   margin: 0 auto;
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 .tabs {
+  display: flex;
   overflow: hidden;
   border-bottom: 0;
   font-family: "CiutadellaRoundedRegular",sans-serif;
@@ -13,7 +12,7 @@
   border-color: #BDCDDF;
 }
 
-.tab-link{
+.tab-link {
   float: left;
   cursor: pointer;
   padding: 14px 40px;
@@ -21,7 +20,7 @@
   font-weight: bold;
 }
 
-.tab-active .tab-link{
+.tab-active .tab-link {
   position: relative;
   bottom: -1px;
   border-color: #BDCDDF;
@@ -36,7 +35,6 @@
   font-weight: bold;
 }
 
-
 .tabs button:hover {
   background-color: #ddd;
 }
@@ -45,14 +43,25 @@
   background-color: #ccc;
 }
 
-/* Style the tab content */
 .tabcontent {
   position: relative;
-  padding: 6px 12px;
+  padding: 12px 12px;
   border-color: #BDCDDF;
   background-color: #F1F5F9;
   border-style: solid;
   border-width: 1px;
   z-index: 1;
   margin-top: -1px;
+}
+
+@media screen and (max-width: 520px) {
+  .tab-link{
+      padding: 14px 20px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .tabs-container {
+    margin: 0 20px;
+  }
 }

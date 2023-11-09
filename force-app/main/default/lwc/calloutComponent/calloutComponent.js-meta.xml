@@ -11,7 +11,7 @@
 		<targetConfig targets="lightningCommunity__Default">
 			<property label="Bolt text" name="boltTextProperty" type="String" required="true"></property>
 			<property label="Normal text" name="normalTextProperty" type="String" required="true"></property>
-			<property label="Type (Notitie of Waarschuwing)" name="typeProperty" type="String" required="true"></property>
+			<property name="typeProperty" type="String" default="Notitie" label="Type (Notitie of Waarschuwing)" datasource="Notitie,Waarschuwing" />
 		</targetConfig>
 	</targetConfigs>
 </LightningComponentBundle>

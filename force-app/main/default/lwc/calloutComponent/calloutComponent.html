@@ -1,34 +1,28 @@
 <template>
     <template if:true={showNote}>
         <div class="note">
-            <table>
-                <tbody>
-                    <tr>
-                        <td style="width: 10%;">
-                            <img src={noteIcon} height="100px" width="100px"></img>
-                        </td>
-                        <td style="width: 90%;">
-                            <h1><b>{boltText}: </b>{normalText}</h1>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="content">
+                <div class="icon">
+                    <img src={noteIcon} height="50px" width="50px"></img>
+                </div>
+
+                <div class="icon">
+                    <h1><b>{boltText}: </b>{normalText}</h1>
+                </div>
+            </div>
         </div>
     </template>
     <template if:true={showWarning}>
         <div class="warning">
-            <table>
-                <tbody>
-                    <tr>
-                        <td style="width: 10%;">
-                            <img src={warningIcon} height="100px" width="100px"></img>
-                        </td>
-                        <td style="width: 90%;">
-                            <h1><b>{boltText}: </b>{normalText}</h1>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="content">
+                <div class="icon">
+                    <img src={warningIcon} height="50px" width="50px"></img>
+                </div>
+
+                <div class="icon">
+                    <h1><b>{boltText}: </b>{normalText}</h1>
+                </div>
+            </div>
         </div>
     </template>
 </template>

@@ -1,18 +1,14 @@
 <template>
-    <div class="pageCalloutDiv">
-        <table>
-            <tbody>
-            <tr>
-            <td style="width: 33%;">
+    <div class="callout-container">
+        <div class="icon">
                 <img src={pageCalloutIcon} height="100px" width="100px"></img>
-            </td>
-            <td style="width: 66%;">
-                <h1><b>{title}</b></h1>
-                <br>
-                <h2>{text}</h2>
-            </td>
-            </tr>
-            </tbody>
-        </table>
+
+        </div>
+
+        <div class="content">
+            <span class="title">{title}</span>
+            <span class="text">{text}</span>
+        </div>
+
     </div>
 </template>

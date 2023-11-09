@@ -1,16 +1,29 @@
 .note{
+    max-width: 840px;
+    margin: 0 auto;
     border-radius: 15px;
     border: 2px solid #243bff;
     padding: 20px;
     background-color:#eceefb;
-    margin-left: 40px;
-    margin-right: 40px;
 }
 .warning{
+    max-width: 840px;
+    margin: 0 auto;
     border-radius: 15px;
     border: 2px solid #ff284f;
     padding: 20px;
     background-color: #fbecef;
-    margin-left: 40px;
-    margin-right: 40px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 880px) {
+  .note, .warning{
+    margin: 0 20px;
+  }
 }
