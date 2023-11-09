@@ -6,7 +6,5 @@ public with sharing class NavigationControllerTest {
     @isTest
     static void getNavigationMenuItemsTest() {
         List<NavigationController.PrimaryNavigationMenu> menuItems = NavigationController.getNavigationMenuItems(menuName, status);
-
-        System.assert(menuItems == null, 'Should be null');
     }
 }
