@@ -24,7 +24,7 @@
   position: relative;
   bottom: -1px;
   border-color: #BDCDDF;
-  background-color: #F1F5F9;
+  background-color: white;
   border-style: solid;
   border-width: 1px 1px 0px 1px;
   border-bottom: 2px solid #F1F5F9;
@@ -40,14 +40,14 @@
 }
 
 .tabs button.active {
-  background-color: #ccc;
+  background-color: white;
 }
 
 .tabcontent {
   position: relative;
   padding: 12px 12px;
   border-color: #BDCDDF;
-  background-color: #F1F5F9;
+  background-color: white;
   border-style: solid;
   border-width: 1px;
   z-index: 1;

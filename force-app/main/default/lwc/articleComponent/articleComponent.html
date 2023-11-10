@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-grid slds-grid_vertical slds-grid_align-center">
+
+        <template for:each={articlesToDisplay} for:item="article">
+            <div key={article.Id} class="slds-col slds-size_10-of-12 slds-small-size--1-of-1 slds-medium-size--10-of-12 slds-align-middle topic-position">
+                <template for:each={article.articleWrappers} for:item="topic">
+                    <div key={topic.Id} style={topic.style} class={topic.classes}>
+                        <lightning-formatted-rich-text style={topic.textStyle}
+                            value={topic.text}
+                        ></lightning-formatted-rich-text>
+                    </div>
+                </template>
+            </div>
+
+        </template>
+
+
+    </div>
+
+</template>

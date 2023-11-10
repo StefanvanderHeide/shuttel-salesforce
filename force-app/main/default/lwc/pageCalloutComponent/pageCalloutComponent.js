@@ -5,16 +5,19 @@ import GetResourceURL from '@salesforce/apex/DisplayImageController.getResourceU
 export default class PageCalloutComponent extends LightningElement {
     @api titleProperty;
     @api textProperty;
+    @api pageCalloutImageProperty;
     @track title;
-    @track pageCalloutIcon;
+    @track pageCalloutImageUrl;
     @track text;
+    @track pageCalloutImage;
 
     connectedCallback(){
         this.title = this.titleProperty;
         this.text = this.textProperty;
-        GetResourceURL({resourceName: 'pageCalloutIcon'}).then(
+        this.pageCalloutImage = this.pageCalloutImageProperty;
+        GetResourceURL({resourceName: this.pageCalloutImage}).then(
             response => {
-                this.pageCalloutIcon = response;
+                this.pageCalloutImageUrl = response;
             }
         ).catch(error => {
             console.log('Error: ' + error.body.message);

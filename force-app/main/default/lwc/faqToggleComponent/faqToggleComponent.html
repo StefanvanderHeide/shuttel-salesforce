@@ -1,11 +1,21 @@
 <template>
     <div class="toggle-container">
-        <button class="accordion" onclick={showPanelFunction}><b>{question}</b></button>
+        <span class="toggle-switch" onclick={showPanelFunction}>
+
+            <template if:true={showPanel}>
+                <lightning-icon class="toggle-icon" icon-name="utility:chevronup" size="small"></lightning-icon>
+            </template>
+
+            <template if:false={showPanel}>
+                <lightning-icon class="toggle-icon" icon-name="utility:chevrondown" size="small"></lightning-icon>
+            </template>
+
+            <span class="toggle-title">{question}</span>
+        </span>
         <template if:true={showPanel}>
-            <div class="panel">
+            <div class="toggle-content">
                 <lightning-formatted-rich-text value={answer}></lightning-formatted-rich-text>
             </div>
         </template>
-
     </div>
 </template>
