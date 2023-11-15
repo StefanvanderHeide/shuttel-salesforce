@@ -2,11 +2,9 @@ import { LightningElement, api, wire, track } from "lwc";
 import GetResourceURL from '@salesforce/apex/DisplayImageController.getResourceURL'
 
 export default class CalloutComponent extends LightningElement {
-    @api boltTextProperty;
-    @api normalTextProperty;
+    @api calloutTextProperty;
     @api typeProperty;
-    @track boltText;
-    @track normalText;
+    @track calloutText;
     @track type;
     @track showNote;
     @track showWarning;
@@ -14,8 +12,7 @@ export default class CalloutComponent extends LightningElement {
     @track warningIcon;
 
     connectedCallback(){
-        this.boltText = this.boltTextProperty;
-        this.normalText = this.normalTextProperty;
+        this.calloutText = this.calloutTextProperty;
         this.type = this.typeProperty;
         if(this.type == 'Notitie'){
             this.showWarning = false;
