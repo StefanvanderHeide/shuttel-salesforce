@@ -1,0 +1,23 @@
+.content-container {
+	max-width: 840px;
+	margin: 0 auto;
+}
+.content-row {
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	align-items: center;
+}
+
+.content-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.column-1_3 {
+	width: 33%;
+}
+
+.column-2_3 {
+	width: 67%;
+}

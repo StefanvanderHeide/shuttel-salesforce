@@ -44,6 +44,9 @@
 }
 
 .tabcontent {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
   position: relative;
   padding: 12px 12px;
   border-color: #BDCDDF;
@@ -52,6 +55,14 @@
   border-width: 1px;
   z-index: 1;
   margin-top: -1px;
+}
+
+.tabcontent-image{
+  max-width: 33%;
+}
+
+.tabcontent-text{
+  flex: 1;
 }
 
 @media screen and (max-width: 520px) {

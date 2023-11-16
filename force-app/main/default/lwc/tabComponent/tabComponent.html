@@ -41,50 +41,41 @@
 
 		<template if:true={show1}>
 			<div class="tabcontent">
-				<table>
-					<tbody>
-						<tr>
-							<td style="width: 33%;">
-								<img src={staticResource1Url} height={staticResource1Height} width={staticResource1Width}></img>
-							</td>
-							<td style="width: 66%;">
-								<lightning-formatted-rich-text value={text1}></lightning-formatted-rich-text>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+
+				<div class="tabcontent-image">
+					<img src={staticResource1Url} height={staticResource1Height} width={staticResource1Width}></img>
+				</div>
+
+				<div class="tabcontent-text">
+					<lightning-formatted-rich-text value={text1}></lightning-formatted-rich-text>
+				</div>
+
 			</div>
 		</template>
 		<template if:true={show2}>
 			<div class="tabcontent">
-				<table>
-					<tbody>
-						<tr>
-							<td style="width: 33%;">
-								<img src={staticResource2Url} height={staticResource2Height} width={staticResource2Width}></img>
-							</td>
-							<td style="width: 66%;">
-								<lightning-formatted-rich-text value={text2}></lightning-formatted-rich-text>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+
+				<div class="tabcontent-image">
+					<img src={staticResource2Url} height={staticResource2Height} width={staticResource2Width}></img>
+				</div>
+
+				<div class="tabcontent-text">
+					<lightning-formatted-rich-text value={text2}></lightning-formatted-rich-text>
+				</div>
+
 			</div>
 		</template>
 		<template if:true={show3}>
 			<div class="tabcontent">
-				<table>
-					<tbody>
-						<tr>
-							<td style="width: 33%;">
-								<img src={staticResource3Url} height={staticResource3Height} width={staticResource3Width}></img>
-							</td>
-							<td style="width: 66%;">
-								<lightning-formatted-rich-text value={text3}></lightning-formatted-rich-text>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+
+				<div class="tabcontent-image">
+					<img src={staticResource3Url} height={staticResource3Height} width={staticResource3Width}></img>
+				</div>
+
+				<div class="tabcontent-text">
+					<lightning-formatted-rich-text value={text3}></lightning-formatted-rich-text>
+				</div>
+
 			</div>
 		</template>
 	</div>
