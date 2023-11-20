@@ -2,17 +2,19 @@
     max-width: 840px;
     margin: 0 auto;
     border-radius: 15px;
-    border: 2px solid #243bff;
+    border: 2px solid #2441ff;
     padding: 20px;
-    background-color:#eceefb;
+    background-color:#ebedfa;
+    margin-bottom: 20px;
 }
 .warning{
     max-width: 840px;
     margin: 0 auto;
     border-radius: 15px;
-    border: 2px solid #ff284f;
+    border: 2px solid #ff2441;
     padding: 20px;
-    background-color: #fbecef;
+    background-color: #faebee;
+    margin-bottom: 20px;
 }
 
 .content {
@@ -20,6 +22,7 @@
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    font-size: 18px;
 }
 
 @media screen and (max-width: 880px) {

@@ -11,6 +11,7 @@
 		<targetConfig targets="lightningCommunity__Default">
 			<property label="Title" name="titleProperty" type="String" required="true"></property>
             <property label="Text" name="textProperty" type="String" required="true"></property>
+			<property name="showBottomBorder" type="String" default="Ja" label="Toon border onder blok" datasource="Ja,Nee" />
 		</targetConfig>
 	</targetConfigs>
 </LightningComponentBundle>

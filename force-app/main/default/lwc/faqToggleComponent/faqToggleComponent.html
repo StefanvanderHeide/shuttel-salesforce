@@ -1,21 +1,44 @@
 <template>
-    <div class="toggle-container">
-        <span class="toggle-switch" onclick={showPanelFunction}>
-
+    <template if:true={showBottomBorder}>
+        <div class="toggle-container">
+            <span class="toggle-switch" onclick={showPanelFunction}>
+    
+                <template if:true={showPanel}>
+                    <lightning-icon class="toggle-icon" icon-name="utility:chevronup" size="small"></lightning-icon>
+                </template>
+    
+                <template if:false={showPanel}>
+                    <lightning-icon class="toggle-icon" icon-name="utility:chevrondown" size="small"></lightning-icon>
+                </template>
+    
+                <span class="toggle-title">{question}</span>
+            </span>
             <template if:true={showPanel}>
-                <lightning-icon class="toggle-icon" icon-name="utility:chevronup" size="small"></lightning-icon>
+                <div class="toggle-content">
+                    <lightning-formatted-rich-text value={answer}></lightning-formatted-rich-text>
+                </div>
             </template>
-
-            <template if:false={showPanel}>
-                <lightning-icon class="toggle-icon" icon-name="utility:chevrondown" size="small"></lightning-icon>
+        </div>
+    </template>
+    <template if:false={showBottomBorder}>
+        <div class="toggle-container2">
+            <span class="toggle-switch" onclick={showPanelFunction}>
+    
+                <template if:true={showPanel}>
+                    <lightning-icon class="toggle-icon" icon-name="utility:chevronup" size="small"></lightning-icon>
+                </template>
+    
+                <template if:false={showPanel}>
+                    <lightning-icon class="toggle-icon" icon-name="utility:chevrondown" size="small"></lightning-icon>
+                </template>
+    
+                <span class="toggle-title">{question}</span>
+            </span>
+            <template if:true={showPanel}>
+                <div class="toggle-content">
+                    <lightning-formatted-rich-text value={answer}></lightning-formatted-rich-text>
+                </div>
             </template>
-
-            <span class="toggle-title">{question}</span>
-        </span>
-        <template if:true={showPanel}>
-            <div class="toggle-content">
-                <lightning-formatted-rich-text value={answer}></lightning-formatted-rich-text>
-            </div>
-        </template>
-    </div>
+        </div>
+    </template>
 </template>

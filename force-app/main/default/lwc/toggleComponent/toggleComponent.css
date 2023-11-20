@@ -1,15 +1,24 @@
 .toggle-container {
   max-width: 840px;
   margin: 0 auto;
-  border-radius: 15px;
-  border: 2px solid #BDCDDF;
+  border-top: 1px solid #BDCDDF;
+  border-bottom: 1px solid #BDCDDF;  
   padding: 15px 20px;
-  background-color: #F1F5F9;
+  background-color: #fff;
+}
+
+.toggle-container2 {
+  max-width: 840px;
+  margin: 0 auto;
+  border-top: 1px solid #BDCDDF;
+  border-bottom: none;  
+  padding: 15px 20px;
+  background-color: #fff;
 }
 
 .toggle-switch {
   font-family: "CiutadellaRoundedBOLD",sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -23,14 +32,14 @@
 }
 
 .active, .toggle-switch:hover {
-  background-color: #F1F5F9;
+  background-color: #fff;
 }
 
 .toggle-content {
-  font-size: 14px;
+  font-size: 18px;
   padding-top: 40px;
   padding-bottom: 20px;
-  background-color: #F1F5F9;
+  background-color: #fff;
   overflow: hidden;
 }
 
