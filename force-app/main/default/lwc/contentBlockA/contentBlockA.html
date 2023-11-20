@@ -13,20 +13,15 @@
             </div>
 		</template>
 		<template if:true={pictureRight}>
-            <div class="content-column">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td style="width: 66%;">
-                                <h1><b>{title}</b></h1>
-                                <lightning-formatted-rich-text value={text}></lightning-formatted-rich-text>
-                            </td>
-                            <td style="width: 33%;">
-                                <img src={staticResourceUrl} height={staticResourceHeight} width={staticResourceWidth}></img>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="content-row">
+                <div class="content-column column-2_3">
+                    <h1><b>{title}</b></h1>
+                    <lightning-formatted-rich-text value={text}></lightning-formatted-rich-text>                
+                </div>
+
+                <div class="content-column column-1_3">
+                    <img src={staticResourceUrl} height={staticResourceHeight} width={staticResourceWidth}></img>
+                </div>
             </div>
 		</template>
 	</div>

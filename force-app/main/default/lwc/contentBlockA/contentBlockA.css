@@ -21,3 +21,10 @@
 .column-2_3 {
 	width: 67%;
 }
+
+
+@media screen and (max-width: 880px) {
+  .content-container {
+    margin: 0 20px;
+  }
+}

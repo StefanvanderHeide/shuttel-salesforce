@@ -1,3 +1,33 @@
-{
-    
+.content-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 840px;
+	margin: 0 auto;
+}
+
+.content-column{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media screen and (max-width: 880px) {
+    .content-container {
+        margin: 0 20px;
+        flex-direction: column;
+    }
+
+    .content-column{
+        flex-direction: row;
+        margin: 15px 0;
+    }
+
+    .column-1_3 {
+	    width: 33%;
+    }
+
+    .column-2_3 {
+        width: 67%;
+    }
 }
