@@ -1,13 +1,17 @@
 <template>
-    <div class="callout-container">
-        <div class="icon">
-                <img src={pageCalloutImageUrl} height="100px" width="100px"></img>
-        </div>
-
+    <div class="container">
         <div class="content">
-            <span class="title">{title}</span>
-            <span class="text">{text}</span>
+            <div class="icon">
+                    <img src={pageCalloutImageUrl} height="100px" width="auto"></img>
+            </div>
+            <div class="text">
+                <div class="title">
+                    <span>{title}</span>
+                </div>
+                <div class="callout">
+                    <span>{text}</span>
+                </div>
+            </div>
         </div>
-
     </div>
 </template>

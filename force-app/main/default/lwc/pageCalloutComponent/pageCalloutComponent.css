@@ -1,29 +1,39 @@
-.callout-container {
+.container {
     max-width: 100%;
     margin: 18px auto;
-    background-color: #F1F5F9;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
     border-radius: 15px;
+    border: 2px solid #2441ff;
+    padding: 20px;
+    background-color:#F1F5F9;  
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .title {
     font-family: "CiutadellaRoundedBOLD",sans-serif;
-    font-size: 18px;
+
 }
 
 .content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
     font-size: 18px;
-    gap: 10px;
 }
 
-@media screen and (max-width: 880px) {
-  .callout-container {
-    gap: 20px;
+.text {
+  flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    flex-direction: column;
   }
 }
