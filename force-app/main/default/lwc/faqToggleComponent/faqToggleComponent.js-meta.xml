@@ -10,7 +10,7 @@
 	<targetConfigs>
 		<targetConfig targets="lightningCommunity__Default">
 			<property label="Article number" name="articleNumberProperty" type="String" default="" required="true"></property>
-			<property name="showBottomBorder" type="String" default="Ja" label="Toon border onder blok" datasource="Ja,Nee" />
+			<property name="showBottomBorder" type="String" default="Nee" label="Toon border onder blok" datasource="Ja,Nee" />
 		</targetConfig>
 	</targetConfigs>
 </LightningComponentBundle>

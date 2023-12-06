@@ -3,6 +3,7 @@ import GetResourceURL from '@salesforce/apex/DisplayImageController.getResourceU
 
 export default class CalloutComponent extends LightningElement {
     @api calloutTextProperty;
+    @api boldCalloutTextProperty;
     @api typeProperty;
     @track calloutText;
     @track type;
@@ -10,9 +11,11 @@ export default class CalloutComponent extends LightningElement {
     @track showWarning;
     @track noteIcon;
     @track warningIcon;
+    @track boldCalloutText;
 
     connectedCallback(){
         this.calloutText = this.calloutTextProperty;
+        this.boldCalloutText = this.boldCalloutTextProperty;
         this.type = this.typeProperty;
         if(this.type == 'Notitie'){
             this.showWarning = false;

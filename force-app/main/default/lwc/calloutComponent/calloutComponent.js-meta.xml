@@ -9,6 +9,7 @@
 	</targets>
 	<targetConfigs>
 		<targetConfig targets="lightningCommunity__Default">
+			<property label="Bold Callout text" name="boldCalloutTextProperty" type="String" required="false"></property>
 			<property label="Callout text" name="calloutTextProperty" type="String" required="true"></property>
 			<property name="typeProperty" type="String" default="Notitie" label="Type (Notitie of Waarschuwing)" datasource="Notitie,Waarschuwing" />
 		</targetConfig>
