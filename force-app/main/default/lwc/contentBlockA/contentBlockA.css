@@ -1,6 +1,7 @@
 .content-container {
 	max-width: 840px;
 	margin: 0 auto;
+	font-size: 18px;
 }
 .content-row {
 	display: flex;

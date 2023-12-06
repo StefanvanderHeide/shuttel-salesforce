@@ -42,9 +42,11 @@
 		<template if:true={show1}>
 			<div class="tabcontent">
 
-				<div class="tabcontent-image">
-					<img src={staticResource1Url} height={staticResource1Height} width={staticResource1Width}></img>
-				</div>
+				<template if:true={staticResource1Url}>
+					<div class="tabcontent-image">
+						<img src={staticResource1Url} height={staticResource1Height} width={staticResource1Width}></img>
+					</div>
+				</template>
 
 				<div class="tabcontent-text">
 					<lightning-formatted-rich-text value={text1}></lightning-formatted-rich-text>
@@ -55,9 +57,11 @@
 		<template if:true={show2}>
 			<div class="tabcontent">
 
-				<div class="tabcontent-image">
-					<img src={staticResource2Url} height={staticResource2Height} width={staticResource2Width}></img>
-				</div>
+				<template if:true={staticResource2Url}>
+					<div class="tabcontent-image">
+						<img src={staticResource2Url} height={staticResource2Height} width={staticResource2Width}></img>
+					</div>
+				</template>
 
 				<div class="tabcontent-text">
 					<lightning-formatted-rich-text value={text2}></lightning-formatted-rich-text>
@@ -68,9 +72,11 @@
 		<template if:true={show3}>
 			<div class="tabcontent">
 
-				<div class="tabcontent-image">
-					<img src={staticResource3Url} height={staticResource3Height} width={staticResource3Width}></img>
-				</div>
+				<template if:true={staticResource3Url}>
+					<div class="tabcontent-image">
+						<img src={staticResource3Url} height={staticResource3Height} width={staticResource3Width}></img>
+					</div>
+				</template>
 
 				<div class="tabcontent-text">
 					<lightning-formatted-rich-text value={text3}></lightning-formatted-rich-text>

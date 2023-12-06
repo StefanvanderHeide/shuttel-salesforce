@@ -259,7 +259,8 @@
   width: 100%;
   height: 1px;
   background-color: grey;
-  margin-top: -20px;
+  /*margin-top: -20px; why? */
+  margin: 20px 0;
 }
 
 .article-item.selfServiceArticleListItem {

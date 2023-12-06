@@ -1,5 +1,5 @@
 .toggle-container {
-  max-width: 840px;
+  max-width: 100%;
   margin: 0 auto;
   border-top: 1px solid #BDCDDF;
   border-bottom: 1px solid #BDCDDF;  
@@ -8,7 +8,7 @@
 }
 
 .toggle-container2 {
-  max-width: 840px;
+  max-width: 100%;
   margin: 0 auto;
   border-top: 1px solid #BDCDDF;
   border-bottom: none;  
@@ -25,7 +25,6 @@
   border: none;
   outline: none;
   transition: 0.4s;
-
   display: flex;
   gap: 25px;
   align-items: center;
@@ -37,8 +36,7 @@
 
 .toggle-content {
   font-size: 18px;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding: 20px 0;
   background-color: #fff;
   overflow: hidden;
 }
@@ -46,10 +44,4 @@
 .toggle-icon {
     --slds-c-icon-color-foreground-default: #000;
     --slds-c-icon-color-background: transparent;
-}
-
-@media screen and (max-width: 880px) {
-  .toggle-container {
-    margin: 0 20px;
-  }
 }
