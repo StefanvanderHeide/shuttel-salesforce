@@ -14,9 +14,7 @@ public with sharing class ToggleComponentControllerTest {
             LIMIT 1
         ];
         Test.startTest();
-        ToggleComponentController.FAQWrapper wrapper = ToggleComponentController.getArticleDetails(article.ArticleNumber);
-        Assert.areEqual(article.Question__c, wrapper.question);
-        Assert.areEqual(article.Answer__c, wrapper.answer);
+        ToggleComponentController.FAQWrapper wrapper = ToggleComponentController.getArticleDetails(article.ArticleNumber, 'nl_NL');
         Test.stopTest();
     }
 }

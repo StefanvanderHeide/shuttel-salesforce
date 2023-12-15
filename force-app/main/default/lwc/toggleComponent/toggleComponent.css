@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'CiutadellaRoundedBOLD';
+  src: url('/resource/Shuttel_font/Lettertype/CiutadellaRounded-Bold.otf');
+
+}
+@font-face {
+  font-family: 'CiutadellaRoundedRegular';
+  src: url('/resource/Shuttel_font/Lettertype/CiutadellaRounded-Regular.otf');
+}
+
 .toggle-container {
   max-width: 100%;
   margin: 0 auto;

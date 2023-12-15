@@ -12,7 +12,7 @@ public with sharing Class DisplayImageController {
         if (resourceList.size() == 1) {
             String urlInstance = String.valueof(System.URL.getSalesforceBaseURL()).replace('Url:[delegate=','').replace(']','');
             String namespace = resourceList[0].NamespacePrefix;
-            return supportSiteSettings.SupportSiteUrl__c + '/support/resource/' 
+            return supportSiteSettings.SupportSiteUrl__c + '/resource/' 
               + resourceList[0].SystemModStamp.getTime() + '/' 
               + (namespace != null && namespace != '' ? namespace + '__' : '') 
               + resourceName; 
