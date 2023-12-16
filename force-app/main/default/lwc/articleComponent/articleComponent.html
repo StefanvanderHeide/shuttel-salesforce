@@ -4,17 +4,197 @@
         <template for:each={articlesToDisplay} for:item="article">
             <div key={article.Id} class="slds-col slds-size_10-of-12 slds-small-size--1-of-1 slds-medium-size--10-of-12 slds-align-middle topic-position">
                 <template for:each={article.articleWrappers} for:item="topic">
-                    <div key={topic.Id} style={topic.style} class={topic.classes}>
-                        <lightning-formatted-rich-text style={topic.textStyle}
-                            value={topic.text}
-                        ></lightning-formatted-rich-text>
-                    </div>
+                    <template lwc:if={topic.isCallout}>
+                        <template if:true={topic.calloutTypeNote}>
+                            <div class="calloutNote" key={topic.Id}>
+                                <div class="calloutContent">
+                                    <div class="calloutIcon">
+                                        <img src={noteIcon} height="100px" width="100px"></img>
+                                    </div>
+                                    <div class="calloutText">
+                                        <lightning-formatted-rich-text style="font-family: CiutadellaRoundedBOLD; sans-serif;" value={topic.calloutBoldText}></lightning-formatted-rich-text>
+                                        <lightning-formatted-rich-text value={topic.calloutText}></lightning-formatted-rich-text>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <template if:true={topic.calloutTypeWarning}>
+                            <div class="calloutWarning" key={topic.Id}>
+                                <div class="calloutContent">
+                                    <div class="calloutIcon">
+                                        <img src={warningIcon} height="100px" width="100px"></img>
+                                    </div>
+                                    <div class="calloutText">
+                                        <lightning-formatted-rich-text style="font-family: CiutadellaRoundedBOLD; sans-serif;" value={topic.calloutBoldText}></lightning-formatted-rich-text>
+                                        <lightning-formatted-rich-text value={topic.calloutText}></lightning-formatted-rich-text>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </template>
+                    <template lwc:if={topic.isPageCallout}>
+                        <div key={topic.Id} class="pageCalloutContainer">
+                            <div class="pageCalloutContent">
+                                <div class="pageCalloutIcon">
+                                        <img src={topic.pageCalloutImage} height="100px" width="auto"></img>
+                                </div>
+                                <div class="pageCalloutText">
+                                    <div class="pageCalloutTitle">
+                                        <span>{topic.pageCalloutTitle}</span>
+                                    </div>
+                                    <div class="pageCalloutCallout">
+                                        <lightning-formatted-rich-text value={topic.pageCalloutText}></lightning-formatted-rich-text>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    <template lwc:if={topic.isToggle}>
+                        <template if:true={topic.toggleShowBottomBorder}>
+                            <div key={topic.Id} class="toggle-container">
+                                <span class="toggle-switch" onclick={showPanelFunction}>
+                        
+                                    <template if:true={showPanel}>
+                                        <lightning-icon class="toggle-icon" icon-name="utility:chevronup" size="small"></lightning-icon>
+                                    </template>
+                        
+                                    <template if:false={showPanel}>
+                                        <lightning-icon class="toggle-icon" icon-name="utility:chevrondown" size="small"></lightning-icon>
+                                    </template>
+                        
+                                    <span class="toggle-title">{topic.toggleHeader}</span>
+                                </span>
+                                <template if:true={showPanel}>
+                                    <div class="toggle-content">
+                                        <lightning-formatted-rich-text value={topic.toggleText}></lightning-formatted-rich-text>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                        <template if:false={topic.toggleShowBottomBorder}>
+                            <div key={topic.Id} class="toggle-container2">
+                                <span class="toggle-switch" onclick={showPanelFunction}>
+                        
+                                    <template if:true={showPanel}>
+                                        <lightning-icon class="toggle-icon" icon-name="utility:chevronup" size="small"></lightning-icon>
+                                    </template>
+                        
+                                    <template if:false={showPanel}>
+                                        <lightning-icon class="toggle-icon" icon-name="utility:chevrondown" size="small"></lightning-icon>
+                                    </template>
+                        
+                                    <span class="toggle-title">{topic.toggleHeader}</span>
+                                </span>
+                                <template if:true={showPanel}>
+                                    <div class="toggle-content">
+                                        <lightning-formatted-rich-text value={topic.toggleText}></lightning-formatted-rich-text>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                    </template>
+
+                    <template lwc:if={topic.isTab}>
+                        <div key={topic.Id} class="tabs-container">
+                            <div class="tabs">
+                                <template if:true={topic.tabWrapper.tabShow1}>
+                                    <template if:true={show1}>
+                                        <div class="tablink tab-active">
+                                            <div class="tab-link" onclick={openTitle1}>{topic.tabWrapper.tabTitle1}</div>
+                                        </div>
+                                    </template>
+                                    <template if:false={show1}>
+                                        <div class="tablink">
+                                            <div class="tab-link" onclick={openTitle1}>{topic.tabWrapper.tabTitle1}</div>
+                                        </div>
+                                    </template>
+                                </template>
+                                <template if:true={topic.tabWrapper.tabShow2}>
+                                    <template if:true={show2}>
+                                        <div class="tablink tab-active">
+                                            <div class="tab-link" onclick={openTitle2}>{topic.tabWrapper.tabTitle2}</div>
+                                        </div>
+                                    </template>
+                                    <template if:false={show2}>
+                                        <div class="tablink">
+                                            <div class="tab-link" onclick={openTitle2}>{topic.tabWrapper.tabTitle2}</div>
+                                        </div>
+                                    </template>
+                                </template>
+                                
+
+				                <template if:true={topic.tabWrapper.tabShow3}>
+                                    <template if:true={show3}>
+                                        <div class="tablink tab-active">
+                                            <div class="tab-link" onclick={openTitle3}>{topic.tabWrapper.tabTitle3}</div>
+                                        </div>
+                                    </template>
+                                    <template if:false={show3}>
+                                        <div class="tablink">
+                                            <div class="tab-link" onclick={openTitle3}>{topic.tabWrapper.tabTitle3}</div>
+                                        </div>
+                                    </template>
+                                </template>
+                            </div>
+
+                            <template if:true={show1}>
+                                <div class="tabcontent">
+                                    <template if:true={topic.tabWrapper.tabImage1Filled}>
+                                        <div class="tabcontent-image">
+                                            <img src={topic.tabWrapper.tabImage1Name} height={topic.tabWrapper.tabImage1Height} width={topic.tabWrapper.tabImage1Width}></img>
+                                        </div>
+                                    </template>
+                    
+                                    <div class="tabcontent-text">
+                                        <lightning-formatted-rich-text value={topic.tabWrapper.tabRichText1}></lightning-formatted-rich-text>
+                                    </div>
+                    
+                                </div>
+                            </template>
+
+                            <template if:true={show2}>
+                                <div class="tabcontent">
+                    
+                                    <template if:true={topic.tabWrapper.tabImage2Filled}>
+                                        <div class="tabcontent-image">
+                                            <img src={topic.tabWrapper.tabImage2Name} height={topic.tabWrapper.tabImage2Height} width={topic.tabWrapper.tabImage2Width}></img>
+                                        </div>
+                                    </template>
+                    
+                                    <div class="tabcontent-text">
+                                        <lightning-formatted-rich-text value={topic.tabWrapper.tabRichText2}></lightning-formatted-rich-text>
+                                    </div>
+                    
+                                </div>
+                            </template>
+
+                            <template if:true={show3}>
+                                <div class="tabcontent">
+                    
+                                    <template if:true={topic.tabWrapper.tabImage3Filled}>
+                                        <div class="tabcontent-image">
+                                            <img src={topic.tabWrapper.tabImage3Name} height={topic.tabWrapper.tabImage3Height} width={topic.tabWrapper.tabImage3Width}></img>
+                                        </div>
+                                    </template>
+                    
+                                    <div class="tabcontent-text">
+                                        <lightning-formatted-rich-text value={topic.tabWrapper.tabRichText3}></lightning-formatted-rich-text>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+
+
+                    <template lwc:else>
+                        <div key={topic.Id} style={topic.style} class={topic.classes}>
+                            <lightning-formatted-rich-text style={topic.textStyle}
+                                value={topic.text}
+                            ></lightning-formatted-rich-text>
+                        </div>
+                    </template>
                 </template>
             </div>
-
         </template>
-
-
     </div>
-
 </template>
