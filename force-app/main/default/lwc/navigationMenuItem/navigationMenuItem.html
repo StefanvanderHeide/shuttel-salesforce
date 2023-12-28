@@ -24,9 +24,31 @@
 		</template>
 
         <template if:true={isMobile}>
-            <a class="mobile-item" href={item.Target} role="button" id="mobileMenuLink">
-				<span class="dropdown-toggle__title">{item.Label}</span>
-            </a>
+			<div class="mobile-item-container">
+				<a class="mobile-item" href={item.Target} role="button" id="mobileMenuLink">
+					<span class="dropdown-toggle__title">{item.Label}</span>
+				</a>
+				<template if:true={hasSecondaryItems}>
+
+					<template if:false={showMobileDropdown}>
+						<lightning-icon onclick={handleMobileDropdownClick} class="toggle-icon" icon-name="utility:chevrondown" size="small"></lightning-icon>
+					</template>
+
+
+					<template if:true={showMobileDropdown}>
+						<lightning-icon onclick={handleMobileDropdownClick} class="toggle-icon" icon-name="utility:chevronup" size="small"></lightning-icon>
+					</template>
+				</template>
+			</div>
+				<template if:true={showMobileDropdown}>
+					<div class="mobile-dropdown">
+						<template for:each={item.SecondaryItems} for:item="secondaryItem" class="mobile-secondary-item">
+							<a class="mobile-dropdown-item" key={secondaryItem.Id}
+								href={secondaryItem.Target}>{secondaryItem.Label}
+							</a>
+						</template>
+					</div>
+				</template>
         </template>
 
 	</div>

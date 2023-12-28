@@ -78,6 +78,15 @@
   display: none;
 }
 
+.mobile-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container{
+  align-self: flex-start;
+}
+
 .hamburger-menu{
   display: none;
 }
@@ -90,7 +99,7 @@
   padding: 10px 20px;
   margin-left: 25px;
   border: 0;
-  font-size: 1.75rem;
+  font-size: 22px;
   margin-top: 40px;
 }
 

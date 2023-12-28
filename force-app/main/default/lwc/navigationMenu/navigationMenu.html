@@ -27,7 +27,7 @@
 
             <template if:true={hamburgerMenuOpen}>
                 <nav class="hamburger-menu">
-                    <ul class="slds-list_vertical">
+                    <ul class="slds-list_vertical mobile-list">
                         <template for:each={menuItems} for:item="item">
                             <li key={item.Id} class="header__menu-list-item">
                                 <c-navigation-menu-item 
@@ -39,7 +39,7 @@
                                 </c-navigation-menu-item>
                             </li>
                         </template>
-                        <li>
+                        <li class="button-container">
                             <button class="contact-button">neem contact op</button>
                         </li>
                     </ul>

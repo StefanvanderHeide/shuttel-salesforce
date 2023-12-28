@@ -15,7 +15,7 @@ export default class CalloutComponent extends LightningElement {
 
     connectedCallback(){
         this.calloutText = this.calloutTextProperty;
-        this.boldCalloutText = this.boldCalloutTextProperty;
+        this.boldCalloutText = this.boldCalloutTextProperty + ' ';
         this.type = this.typeProperty;
         if(this.type == 'Notitie'){
             this.showWarning = false;

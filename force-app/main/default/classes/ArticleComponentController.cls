@@ -860,5 +860,3 @@ public with sharing class ArticleComponentController {
         }
     }
 }
-
-

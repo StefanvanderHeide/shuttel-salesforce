@@ -23,6 +23,8 @@ export default class NavigationMenuItem extends NavigationMixin(LightningElement
 
     hasSecondaryItems;
 
+    showMobileDropdown = false;
+
     async connectedCallback() {
         const { type, target, defaultListViewId, SecondaryItems } = this.item;
         
@@ -80,5 +82,9 @@ export default class NavigationMenuItem extends NavigationMixin(LightningElement
         }
 
         this.updateActiveItem(this.item.target);
+    }
+
+    handleMobileDropdownClick(){
+        this.showMobileDropdown = !this.showMobileDropdown;
     }
 }
