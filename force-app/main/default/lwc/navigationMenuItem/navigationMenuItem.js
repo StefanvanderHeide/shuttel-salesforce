@@ -87,4 +87,12 @@ export default class NavigationMenuItem extends NavigationMixin(LightningElement
     handleMobileDropdownClick(){
         this.showMobileDropdown = !this.showMobileDropdown;
     }
+
+    handleMobileItemClick(event){
+        if (this.showMobileDropdown || !this.hasSecondaryItems) {
+            window.location.href = event.currentTarget.dataset.target;
+        } else {
+            this.handleMobileDropdownClick();
+        }
+    }
 }
