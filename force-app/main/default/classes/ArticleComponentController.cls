@@ -325,14 +325,24 @@ public with sharing class ArticleComponentController {
 
                     }else if(article.ContentBlockATitle__c != null){
                         String imageUrl = getResourceURL(article.ContentBlockAImageName__c);
-                        
+                        Boolean pictureLeft;
+                        Boolean pictureRight;
+                        if(article.ContentBlockAImagePosition__c == 'Left'){
+                            pictureLeft = true;
+                            pictureRight = false;
+                        }else{
+                            pictureLeft = false;
+                            pictureRight = true;
+                        }
                         ContentBlockAWrapper contentBlockAWrapper = new ContentBlockAWrapper(
                             article.ContentBlockATitle__c,
                             article.ContentBlockARichText__c,
                             imageUrl,
                             article.ContentBlockAImageHeight__c,
                             article.ContentBlockAImageWidth__c,
-                            article.ContentBlockAImagePosition__c
+                            article.ContentBlockAImagePosition__c,
+                            pictureLeft,
+                            pictureRight
                         );
                         ArticleWrapper articleWrapper = new ArticleWrapper(
                             null, 
@@ -775,6 +785,10 @@ public with sharing class ArticleComponentController {
         public Decimal contentBlockAImageWidth;
         @AuraEnabled
         public String contentBlockAImagePosition;
+        @AuraEnabled
+        public Boolean contentBlockAPictureLeft;
+        @AuraEnabled
+        public Boolean contentBlockAPictureRight;
         
         public ContentBlockAWrapper(
             String contentBlockATitle,
@@ -782,7 +796,9 @@ public with sharing class ArticleComponentController {
             String contentBlockAImageName,
             Decimal contentBlockAImageHeight,
             Decimal contentBlockAImageWidth,
-            String contentBlockAImagePosition
+            String contentBlockAImagePosition,
+            Boolean contentBlockAPictureLeft,
+            Boolean contentBlockAPictureRight
         ){
             this.contentBlockATitle = contentBlockATitle;
             this.contentBlockARichText = contentBlockARichText;
@@ -790,6 +806,8 @@ public with sharing class ArticleComponentController {
             this.contentBlockAImageHeight = contentBlockAImageHeight;
             this.contentBlockAImageWidth = contentBlockAImageWidth;
             this.contentBlockAImagePosition = contentBlockAImagePosition;
+            this.contentBlockAPictureLeft = contentBlockAPictureLeft;
+            this.contentBlockAPictureRight = contentBlockAPictureRight;
         }
     }
 

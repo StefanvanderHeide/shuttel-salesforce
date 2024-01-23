@@ -48,17 +48,20 @@ export default class ContentBlockB extends LightningElement {
     connectedCallback(){
         this.title1 = this.titleProperty1;
         this.staticResource1Height = this.staticResourceHeight1Property;
-        this.staticResource1Width = this.staticResourceWidth1Property;        this.text1 = this.textProperty1;
+        this.staticResource1Width = this.staticResourceWidth1Property;        
+        this.text1 = this.textProperty1;
         this.linkLabel1 = this.linkLabelProperty1;
         this.linkUrl1 = this.linkLabelProperty1;
         this.title2 = this.titleProperty2;
         this.staticResource2Height = this.staticResourceHeight2Property;
-        this.staticResource2Width = this.staticResourceWidth2Property;        this.text2 = this.textProperty2;
+        this.staticResource2Width = this.staticResourceWidth2Property;        
+        this.text2 = this.textProperty2;
         this.linkLabel2 = this.linkLabelProperty2;
         this.linkUrl2 = this.linkLabelProperty2;
         this.title3 = this.titleProperty3;
         this.staticResource3Height = this.staticResourceHeight3Property;
-        this.staticResource3Width = this.staticResourceWidth3Property;        this.text3 = this.textProperty3;
+        this.staticResource3Width = this.staticResourceWidth3Property;        
+        this.text3 = this.textProperty3;
         this.linkLabel3 = this.linkLabelProperty3;
         this.linkUrl3 = this.linkLabelProperty3;
         GetResourceURL({resourceName: this.staticResourceName1Property}).then(

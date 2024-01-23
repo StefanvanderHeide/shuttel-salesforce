@@ -1,25 +1,25 @@
 <template>
-	<div class="content-container">
+	<div class="contentblockA-container">
 		<template if:true={pictureLeft}>
-            <div class="content-row">
-                <div class="content-column column-1_3">
+            <div class="contentblockA-row">
+                <div class="contentblockA-column column-1_3">
                     <img src={staticResourceUrl} height={staticResourceHeight} width={staticResourceWidth}></img>
                 </div>
 
-                <div class="content-column column-2_3">
+                <div class="contentblockA-column contentBlockAcolumn-2_3">
                     <h1><b>{title}</b></h1>
                     <lightning-formatted-rich-text value={text}></lightning-formatted-rich-text>
                 </div>
             </div>
 		</template>
 		<template if:true={pictureRight}>
-            <div class="content-row">
-                <div class="content-column column-2_3">
+            <div class="contentBlockA-row">
+                <div class="contentblockA-column contentBlockAcolumn-2_3">
                     <h1><b>{title}</b></h1>
                     <lightning-formatted-rich-text value={text}></lightning-formatted-rich-text>                
                 </div>
 
-                <div class="content-column column-1_3">
+                <div class="contentblockA-column column-1_3">
                     <img src={staticResourceUrl} height={staticResourceHeight} width={staticResourceWidth}></img>
                 </div>
             </div>
