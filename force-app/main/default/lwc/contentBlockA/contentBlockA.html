@@ -1,25 +1,25 @@
 <template>
-	<div class="contentblockA-container">
+	<div class="cbacontainer">
 		<template if:true={pictureLeft}>
-            <div class="contentblockA-row">
-                <div class="contentblockA-column column-1_3">
+            <div class="cbarow">
+                <div class="cbacolumn cbacolumn-1_3">
                     <img src={staticResourceUrl} height={staticResourceHeight} width={staticResourceWidth}></img>
                 </div>
 
-                <div class="contentblockA-column contentBlockAcolumn-2_3">
+                <div class="acolumn acolumn-2_3">
                     <h1><b>{title}</b></h1>
                     <lightning-formatted-rich-text value={text}></lightning-formatted-rich-text>
                 </div>
             </div>
 		</template>
 		<template if:true={pictureRight}>
-            <div class="contentBlockA-row">
-                <div class="contentblockA-column contentBlockAcolumn-2_3">
+            <div class="cbarow">
+                <div class="cbacolumn cbacolumn-2_3">
                     <h1><b>{title}</b></h1>
                     <lightning-formatted-rich-text value={text}></lightning-formatted-rich-text>                
                 </div>
 
-                <div class="contentblockA-column column-1_3">
+                <div class="cbacolumn cbacolumn-1_3">
                     <img src={staticResourceUrl} height={staticResourceHeight} width={staticResourceWidth}></img>
                 </div>
             </div>

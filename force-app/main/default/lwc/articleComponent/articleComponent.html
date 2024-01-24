@@ -185,27 +185,27 @@
                         </div>
                     </template>
                     <template lwc:if={topic.isContentBlockA}>
-                        <div key={topic.Id} class="contentblockA-container">
+                        <div key={topic.Id} class="cbacontainer">
                             <template if:true={topic.contentBlockAWrapper.contentBlockAPictureLeft}>
-                                <div class="contentblockA-row">
-                                    <div class="contentblockA-column contentBlockAcolumn-1_3">
+                                <div class="cbarow">
+                                    <div class="cbacolumn cbacolumn-1_3">
                                         <img src={topic.contentBlockAWrapper.contentBlockAImageName} height={topic.contentBlockAWrapper.contentBlockAImageHeight} width={topic.contentBlockAWrapper.contentBlockAImageWidth}></img>
                                     </div>
                     
-                                    <div class="contentblockA-column contentBlockAcolumn-2_3">
+                                    <div class="cbacolumn cbacolumn-2_3">
                                         <h1><b>{topic.contentBlockAWrapper.contentBlockATitle}</b></h1>
                                         <lightning-formatted-rich-text value={topic.contentBlockAWrapper.contentBlockARichText}></lightning-formatted-rich-text>
                                     </div>
                                 </div>
                             </template>
                             <template if:true={topic.contentBlockAWrapper.contentBlockAPictureRight}>
-                                <div class="contentBlockA-row">
-                                    <div class="contentblockA-column contentBlockAcolumn-2_3">
+                                <div class="cbarow">
+                                    <div class="cbacolumn cbacolumn-2_3">
                                         <h1><b>{topic.contentBlockAWrapper.contentBlockATitle}</b></h1>
                                         <lightning-formatted-rich-text value={topic.contentBlockAWrapper.contentBlockARichText}></lightning-formatted-rich-text>
                                     </div>
                     
-                                    <div class="contentblockA-column contentBlockAcolumn-1_3">
+                                    <div class="cbacolumn cbacolumn-1_3">
                                         <img src={topic.contentBlockAWrapper.contentBlockAImageName} height={topic.contentBlockAWrapper.contentBlockAImageHeight} width={topic.contentBlockAWrapper.contentBlockAImageWidth}></img>
                                     </div>
                                 </div>
@@ -213,32 +213,32 @@
                         </div>
                     </template>
                     <template lwc:if={topic.isContentBlockB}>
-                        <div key={topic.Id} class="contentblockB-container">
-                            <div class="contentblockB-column">
-                                <div class="contentblockBcolumn-1_3">
+                        <div key={topic.Id} class="cbbcontainer">
+                            <div class="cbbcolumn">
+                                <div class="cbbcolumn-1_3">
                                     <img src={topic.contentBlockBWrapper.contentBlockBImage1Name} height={topic.contentBlockBWrapper.contentBlockBImage1Height} width={topic.contentBlockBWrapper.contentBlockBImage1Width}></img>
                                 </div>
-                                <div class="contentblockBcolumn-2_3">
+                                <div class="cbbcolumn-2_3">
                                     <h1><b>{topic.contentBlockBWrapper.contentBlockBTitle1}</b></h1>
                                     <lightning-formatted-rich-text value={topic.contentBlockBWrapper.contentBlockBRichText1}></lightning-formatted-rich-text>
                                 </div>
                             </div>
                     
-                            <div class="contentblockB-column">
-                                <div class="contentblockBcolumn-1_3">
+                            <div class="cbbcolumn">
+                                <div class="cbbcolumn-1_3">
                                     <img src={topic.contentBlockBWrapper.contentBlockBImage2Name} height={topic.contentBlockBWrapper.contentBlockBImage2Height} width={topic.contentBlockBWrapper.contentBlockBImage2Width}></img>
                                 </div>
-                                <div class="contentblockBcolumn-2_3">
+                                <div class="cbbcolumn-2_3">
                                     <h1><b>{topic.contentBlockBWrapper.contentBlockBTitle2}</b></h1>
                                     <lightning-formatted-rich-text value={topic.contentBlockBWrapper.contentBlockBRichText2}></lightning-formatted-rich-text>
                                 </div>
                             </div>
                     
-                            <div class="contentblockB-column">
-                                <div class="contentblockBcolumn-1_3">
+                            <div class="cbbcolumn">
+                                <div class="cbbcolumn-1_3">
                                     <img src={topic.contentBlockBWrapper.contentBlockBImage3Name} height={topic.contentBlockBWrapper.contentBlockBImage3Height} width={topic.contentBlockBWrapper.contentBlockBImage3Width}></img>
                                 </div>
-                                <div class="contentblockBcolumn-2_3">
+                                <div class="cbbcolumn-2_3">
                                     <h1><b>{topic.contentBlockBWrapper.contentBlockBTitle3}</b></h1>
                                     <lightning-formatted-rich-text value={topic.contentBlockBWrapper.contentBlockBRichText3}></lightning-formatted-rich-text>
                                 </div>

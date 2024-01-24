@@ -1,34 +1,34 @@
-.contentblockB-container{
+.cbbcontainer{
     display: flex;
     flex-direction: row;
     gap: 10px;
     max-width: 100%;
-	margin: 0 auto;
+    margin: 18px auto;
     font-size: 18px;
 }
 
-.contentblockB-column{
+.cbbcolumn{
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
 @media screen and (max-width: 880px) {
-    .contentblockB-container {
+    .cbbcontainer {
         flex-direction: column;
     }
 
-    .contentblockB-column{
+    .cbbcolumn{
         flex-direction: column;
         align-items: center;
         margin: 15px 0;
     }
 
-    .contentblockBcolumn-1_3 {
+    .cbbcolumn-1_3 {
 	    width: 100%;
     }
 
-    .contentblockBcolumn-2_3 {
+    .cbbcolumn-2_3 {
         width: 100%;
     }
 }

@@ -1,39 +1,39 @@
-.contentblockA-container {
+.cbacontainer {
 	max-width: 100%;
-	margin: 0 auto;
+	margin: 18px auto;
 	font-size: 18px;
 }
-.contentblockA-row {
+.cbarow {
 	display: flex;
 	flex-direction: row;
 	gap: 30px;
 	align-items: center;
 }
 
-.contentblockA-column {
+.cbacolumn {
 	display: flex;
 	flex-direction: column;
 }
 
-.contentBlockAcolumn-1_3 {
+.cbacolumn-1_3 {
 	width: 33%;
 }
 
-.contentBlockAcolumn-2_3 {
+.cbacolumn-2_3 {
 	width: 67%;
 }
 
 
 @media screen and (max-width: 600px) {
-	.contentBlockAcontent-row{
+	.cbarow{
 		flex-direction: column;
 	}
 
-	.contentBlockAcolumn-1_3 {
+	.cbacolumn-1_3 {
 		width: 100%;
 	}
 
-	.contentBlockAcolumn-2_3 {
+	.cbacolumn-2_3 {
 		width: 100%;
 	}
 }
