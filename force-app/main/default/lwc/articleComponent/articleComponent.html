@@ -185,7 +185,7 @@
                         </div>
                     </template>
                     <template lwc:if={topic.isContentBlockA}>
-                        <div key={topic.Id} class="cbacontainer">
+                        <div key={topic.id} class="cbacontainer">
                             <template if:true={topic.contentBlockAWrapper.contentBlockAPictureLeft}>
                                 <div class="cbarow">
                                     <div class="cbacolumn cbacolumn-1_3">
@@ -202,7 +202,7 @@
                                 <div class="cbarow">
                                     <div class="cbacolumn cbacolumn-2_3">
                                         <h1><b>{topic.contentBlockAWrapper.contentBlockATitle}</b></h1>
-                                        <lightning-formatted-rich-text value={topic.contentBlockAWrapper.contentBlockARichText}></lightning-formatted-rich-text>
+                                        <lightning-formatted-rich-text value={topic.contentBlockAWrapper.contentBlockARichText}></lightning-formatted-rich-text>                
                                     </div>
                     
                                     <div class="cbacolumn cbacolumn-1_3">
